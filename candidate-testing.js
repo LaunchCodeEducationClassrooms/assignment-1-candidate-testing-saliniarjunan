@@ -10,19 +10,19 @@ let correctAnswer= "Sally Ride";
 let candidateAnswer ="";
 let questions = ["Who was the first American woman in space?","True or false: 5000 meters = 5 kilometers.","(5 + 3)/2 * 10 = ?","Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?","What is the minimum crew size for the ISS?" ];
 let correctAnswers = ["Sally Ride","True","40","Trajectory","3"] ;
-let candidateAnswers=[];
+let candidateAnswers=["","","","",""];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Enter your name : ");
-return candidateName;
+  let candidateName = input.question("Enter your name : ");
+  return candidateName;
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnqswer //
   for(let i=0 ;i<questions.length ;i++)
   {
-    candidateAnswers[i] =input.question(questions[i]);
+    candidateAnswers[i] = input.question(questions[i]);
   }
   return candidateAnswers;
 
@@ -51,7 +51,7 @@ for(let ind=0; ind < questions.length; ind++)
   console.log(`Correct Answer: ${correctAnswers[ind]} \n`);
 }
 
-console.log(`>>> Overall Grade: ${grade}% (${noOfCorrectAnswers} of ${questions.length} responses correct) <<<'`);
+console.log(`>>> Overall Grade: ${grade}% (${noOfCorrectAnswers} of ${questions.length} responses correct) <<<`);
 
 if (grade>=80)
 {
