@@ -35,7 +35,7 @@ function gradeQuiz(candidateAnswers,candidateName) {
   console.log(candidateAnswers);
   for (let j=0;j<correctAnswers.length;j++)
   {
-    if (candidateAnswers[j].toUpperCase() === correctAnswers[j].toUpperCase())
+    if (candidateAnswers[j].toUpperCase() == correctAnswers[j].toUpperCase())
     {
       noOfCorrectAnswers++;
     }
@@ -46,12 +46,10 @@ console.log(`Candidate Name: ${candidateName}`);
 
 for(let ind=0; ind < questions.length; ind++)
 {
-  console.log(`${questions[ind]}`);
+  console.log(`${ind+1}) ${questions[ind]}`);
   console.log(`Your Answer: ${candidateAnswers[ind]}`);
   console.log(`Correct Answer: ${correctAnswers[ind]} \n`);
 }
-
-
 
 console.log(`>>> Overall Grade: ${grade}% (${noOfCorrectAnswers} of ${questions.length} responses correct) <<<'`);
 
